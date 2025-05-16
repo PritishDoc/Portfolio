@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phone Number Validation API</title>
+  <style>
+    body {
+      background-color: #000428;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4 {
+      color: #00ffe0;
+    }
+    a {
+      color: #00ffe0;
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      margin: 1rem 0;
+      border: 2px solid #00ffe0;
+      border-radius: 12px;
+    }
+    pre {
+      background: #001f3f;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 8px;
+      color: #00ffea;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid #00ffe0;
+      background-color: #00132a;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📞 Phone Number Validation API</h1>
+
+  <div class="section">
+    <p>This project is a <strong>Flask-based web application</strong> that allows users to validate phone numbers using the <strong>Numverify API</strong>. It provides a simple interface where users can input a phone number, and the app returns detailed information such as:</p>
+    <ul>
+      <li>Validity of the number</li>
+      <li>Status (Positive/Negative)</li>
+      <li>Whether the number is allowed or not</li>
+      <li>Line type (Mobile, Landline, VoIP, etc.)</li>
+      <li>Carrier information (Telecom provider)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🚀 Features</h2>
+    <ul>
+      <li><strong>Validate multiple phone numbers at once</strong>: Users can paste multiple numbers in the input field and get the results for each one.</li>
+      <li><strong>User-friendly interface</strong>: Simple, clean UI that displays the validation results clearly.</li>
+      <li><strong>Built with Flask</strong>: The backend is powered by Flask, and the frontend is a responsive HTML form.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🛠 Technologies Used</h2>
+    <ul>
+      <li><strong>Backend:</strong> Python, Flask</li>
+      <li><strong>API:</strong> Numverify API</li>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>External Libraries:</strong> 
+        <ul>
+          <li><code>requests</code> (for making HTTP requests to the API)</li>
+          <li><code>Flask</code> (web framework)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>⚙️ Prerequisites</h2>
+    <p>Before running this application, you need to install the following dependencies:</p>
+    <ul>
+      <li>Python 3.x</li>
+      <li>Flask</li>
+      <li>requests</li>
+    </ul>
+    <p>Install required dependencies using:</p>
+    <pre><code>pip install -r requirements.txt</code></pre>
+  </div>
+
+</body>
+</html>
