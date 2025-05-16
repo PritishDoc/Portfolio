@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌿 Plant Disease Prediction</title>
+  <style>
+    body {
+      background-color: #000428;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4 {
+      color: #00ffe0;
+    }
+    a {
+      color: #00ffe0;
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      margin: 1rem 0;
+      border: 2px solid #00ffe0;
+      border-radius: 12px;
+    }
+    pre {
+      background: #001f3f;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 8px;
+      color: #00ffea;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌿 Plant Disease Detection & Prediction</h1>
+  <img src="https://github.com/PritishDoc/Plant-Disease-Detection-and-Prediction_/assets/141579651/b2fd1d0a-35ea-49dc-b9d2-79218f831de7" alt="pexels-hiwatalaei-2364633" />
+
+  <h2>Overview</h2>
+  <p>This project is a machine learning application designed to predict plant diseases from images using a Convolutional Neural Network (CNN). The goal is to help farmers and agriculturists quickly identify diseases in their crops and take appropriate action to mitigate losses.</p>
+
+  <h2>Features</h2>
+  <ul>
+    <li><strong>Automated Disease Detection:</strong> Upload an image of a plant leaf to receive an immediate diagnosis.</li>
+    <li><strong>User-friendly Interface:</strong> Easy-to-use web interface for uploading images and viewing predictions.</li>
+    <li><strong>Accurate Predictions:</strong> Trained on a large dataset to ensure high accuracy.</li>
+  </ul>
+
+  <h2>Dataset</h2>
+  <p>The dataset consists of 80K RGB images of plant leaves categorized by disease type, split as:</p>
+  <ul>
+    <li>Training Set: 70,292 images (80%)</li>
+    <li>Test Set: 17,573 images (20%)</li>
+  </ul>
+  <p>📦 Dataset Link: <a href="https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset" target="_blank">Tap Here</a></p>
+  <img src="https://github.com/PritishDoc/Plant-Disease-Detection-and-Prediction_/assets/141579651/ea98c981-bb06-4a5b-a2c2-92780461780f" alt="dataset sample" />
+
+  <h2>Image Preprocessing</h2>
+  <img src="Screenshot 2024-06-02 182010.png" alt="Image Preprocessing Steps" />
+
+  <h2>Model Architecture</h2>
+  <img src="1-s2.0-S1574954121000807-ga1_lrg.jpg" alt="Model CNN" />
+  <ul>
+    <li><strong>Convolutional Layers:</strong> Extract image features.</li>
+    <li><strong>Pooling Layers:</strong> Reduce dimensionality.</li>
+    <li><strong>Fully Connected Layers:</strong> Perform classification.</li>
+    <li><strong>Softmax Layer:</strong> Output disease probabilities.</li>
+  </ul>
+  <img src="1695400757616.png" alt="Model Layers" />
+
+  <h3>📈 Model Loss Graph</h3>
+  <p>Training used the Adam optimizer over 10 epochs, resulting in high accuracy and smooth convergence.</p>
+  <img src="https://github.com/PritishDoc/Plant-Disease-Detection-and-Prediction_/assets/141579651/e305cc95-e179-4c24-8d97-2f8d2276e3a1" alt="Loss Graph" />
+
+  <h3>📊 Model Accuracy Graph</h3>
+  <img src="https://github.com/PritishDoc/Plant-Disease-Detection-and-Prediction_/assets/141579651/71fde424-2996-4cf4-bd03-86c702f89da5" alt="Accuracy Graph" />
+
+  <h2>🔍 Sample Output Screenshots</h2>
+  <img src="Screenshot 2024-06-03 090119.png" alt="output1" />
+  <img src="Screenshot 2024-06-03 055103.png" alt="output2" />
+  <img src="Screenshot 2024-06-03 055747.png" alt="output3" />
+  <img src="Screenshot 2024-06-03 055318.png" alt="output4" />
+  <img src="Screenshot 2024-06-03 054733.png" alt="output5" />
+  <img src="Screenshot 2024-06-03 054953.png" alt="output6" />
+
+  <h2>⚙️ Installation</h2>
+  <p>Follow the steps below to set up the project locally:</p>
+
+  <h3>📋 Prerequisites</h3>
+  <ul>
+    <li>Python 3.7+</li>
+    <li>TensorFlow 2.0+</li>
+    <li>Flask</li>
+    <li>OpenCV</li>
+  </ul>
+
+  <h3>📥 Clone the Repository</h3>
+  <pre><code>git clone https://github.com/PritishDoc/plant-disease-detection.git
+cd plant-disease-detection</code></pre>
+
+  <h3>🌐 GitHub Repository</h3>
+  <p><a href="https://github.com/pritishray/plant-disease-detector" target="_blank">🔗 View on GitHub</a></p>
+</body>
+</html>
