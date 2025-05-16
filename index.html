@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pritish Kumar Ray | Futuristic Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
       margin: 0;
@@ -13,7 +13,6 @@
       box-sizing: border-box;
       font-family: 'Roboto', sans-serif;
     }
-
     body {
       background: linear-gradient(135deg, #000428, #004e92);
       color: #ffffff;
@@ -21,25 +20,21 @@
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
-
     header {
       text-align: center;
       margin-bottom: 3rem;
     }
-
     header h1 {
       font-size: 3.5rem;
       color: #00ffe0;
       text-shadow: 0 0 20px #00ffe0, 0 0 40px #0ff;
       font-family: 'Orbitron', sans-serif;
     }
-
     header p {
       font-size: 1.2rem;
       color: #ccc;
       margin-top: 0.5rem;
     }
-
     nav {
       display: flex;
       justify-content: center;
@@ -48,7 +43,6 @@
       margin-bottom: 3rem;
       animation: fadeIn 1.2s ease-in-out;
     }
-
     nav a {
       background: #00ffe0;
       color: #000;
@@ -58,14 +52,12 @@
       text-decoration: none;
       transition: all 0.3s;
     }
-
     nav a:hover {
       background: #000;
       color: #00ffe0;
       border: 1px solid #00ffe0;
       box-shadow: 0 0 12px #00ffe0;
     }
-
     .glass-card {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -77,11 +69,9 @@
       transition: transform 0.4s ease;
       position: relative;
     }
-
     .glass-card:hover {
       transform: translateY(-5px);
     }
-
     .glass-card::before {
       content: '';
       position: absolute;
@@ -90,7 +80,6 @@
       background: linear-gradient(45deg, transparent, rgba(0,255,224,0.1), transparent);
       z-index: 0;
     }
-
     h2 {
       color: #00ffe0;
       margin-bottom: 1rem;
@@ -98,23 +87,19 @@
       position: relative;
       z-index: 1;
     }
-
     ul li, p {
       font-size: 1rem;
       line-height: 1.6;
       position: relative;
       z-index: 1;
     }
-
     a {
       color: #00ffe0;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
     footer {
       text-align: center;
       margin-top: 3rem;
@@ -123,11 +108,9 @@
       padding-top: 2rem;
       border-top: 1px solid #333;
     }
-
     .icon-link {
       margin-right: 10px;
     }
-
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(-10px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -154,20 +137,21 @@
     <p>I am a developer and researcher with a passion for solving real-world problems through backend systems, machine learning, and algorithms. My goal is to contribute impactful work in the tech community and pursue a Ph.D. in Computer Science.</p>
   </section>
 
-<section id="projects" class="glass-card">
-  <h2><i class="fas fa-code icon-link"></i>My Projects</h2>
-  <ul>
-    <li><a href="projects/plant-disease-prediction.html" target="_blank"><strong>Plant Disease Prediction:</strong></a> TensorFlow, Python, ML, CNN, Streamlit, Accuracy 98.2%</li>
-    <li><a href="projects/phone-validator.html" target="_blank"><strong>Phone Validator App:</strong></a> Flask, Python, HTML, CSS, JS</li>
-    <li><a href="projects/us-phone-generator.html" target="_blank"><strong>US Toll-Free/Private Number Generator:</strong></a> Flask, Python, HTML, CSS, JS</li>
-    <li><a href="projects/job-orbit.html" target="_blank"><strong>Job Orbit:</strong></a> Java, Rest API, Spring Boot, MySQL</li>
-    <li><a href="projects/electricity-billing.html" target="_blank"><strong>Electricity Billing App:</strong></a> Java, JDBC, AWT, Swing, JavaFX, MySQL</li>
-    <li><a href="projects/hotel-management.html" target="_blank"><strong>Hotel Management App:</strong></a> Java, JDBC, AWT, Swing, JavaFX, MySQL</li>
-    <li><a href="projects/file-management.html" target="_blank"><strong>File Management App:</strong></a> Java, IO, AWT, JTree</li>
-    <li><a href="projects/calculator.html" target="_blank"><strong>Calculator App:</strong></a> Java, AWT</li>
-    <li><a href="https://github.com/pritishray" target="_blank">🔗 View All Projects on GitHub</a></li>
-  </ul>
-</section>
+  <section id="projects" class="glass-card">
+    <h2><i class="fas fa-code icon-link"></i>My Projects</h2>
+    <ul>
+      <li><a href="projects/plant-disease-prediction.html" target="_blank"><strong>Plant Disease Prediction:</strong></a> TensorFlow, Python, ML, CNN, Streamlit, Accuracy 98.2%</li>
+      <li><a href="projects/phone-validator.html" target="_blank"><strong>Phone Validator App:</strong></a> Flask, Python, HTML, CSS, JS</li>
+      <li><a href="projects/us-phone-generator.html" target="_blank"><strong>US Toll-Free/Private Number Generator:</strong></a> Flask, Python, HTML, CSS, JS</li>
+      <li><a href="projects/job-orbit.html" target="_blank"><strong>Job Orbit:</strong></a> Java, Rest API, Spring Boot, MySQL</li>
+      <li><a href="projects/electricity-billing.html" target="_blank"><strong>Electricity Billing App:</strong></a> Java, JDBC, AWT, Swing, JavaFX, MySQL</li>
+      <li><a href="projects/hotel-management.html" target="_blank"><strong>Hotel Management App:</strong></a> Java, JDBC, AWT, Swing, JavaFX, MySQL</li>
+      <li><a href="projects/file-management.html" target="_blank"><strong>File Management App:</strong></a> Java, IO, AWT, JTree</li>
+      <li><a href="projects/calculator.html" target="_blank"><strong>Calculator App:</strong></a> Java, AWT</li>
+      <li><a href="https://github.com/pritishray" target="_blank">🔗 View All Projects on GitHub</a></li>
+    </ul>
+  </section>
+
   <section id="dsa" class="glass-card">
     <h2><i class="fas fa-brain icon-link"></i>DSA & Profiles</h2>
     <p>🔗 LeetCode: <a href="https://leetcode.com/YOUR_USERNAME" target="_blank">leetcode.com/YOUR_USERNAME</a></p>
@@ -178,7 +162,7 @@
   <section id="papers" class="glass-card">
     <h2><i class="fas fa-file-alt icon-link"></i>Research Papers</h2>
     <ul>
-      <li><strong>Adversarial Attacks & Defenses in ML (Healthcare)</strong><br/>📝 <a href="LINK_TO_PAPER" target="_blank">Read the Full Paper</a></li>
+      <li><strong>Adversarial Attacks & Defenses in ML (Healthcare)</strong><br />📝 <a href="LINK_TO_PAPER" target="_blank">Read the Full Paper</a></li>
     </ul>
   </section>
 
@@ -199,9 +183,4 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const streak = 67; // Simulated LeetCode streak
-      document.getElementById("streak").textContent = `🔥 Current LeetCode Streak: ${streak} days!`;
-    });
-  </script>
-</body>
-</html>
+      // Example static streak (replace with dynamic fetch if you want
