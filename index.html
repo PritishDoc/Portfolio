@@ -2,216 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pritish Kumar Ray | Futuristic Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pritish's Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+    }
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #ffffff;
     }
     body {
-      background: linear-gradient(135deg, #000428, #004e92);
-      color: #ffffff;
-      padding: 2rem;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: 0.3s ease;
     }
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
+    .card {
+      background: var(--bg-color);
+      color: var(--text-color);
+      border: 1px solid #ccc;
+      transition: 0.3s ease;
     }
-    header h1 {
-      font-size: 3.5rem;
-      color: #00ffe0;
-      text-shadow: 0 0 20px #00ffe0, 0 0 40px #0ff;
-      font-family: 'Orbitron', sans-serif;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-top: 0.5rem;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      margin-bottom: 3rem;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    nav a {
-      background: #00ffe0;
-      color: #000;
-      padding: 0.6rem 1.2rem;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-    nav a:hover {
-      background: #000;
-      color: #00ffe0;
-      border: 1px solid #00ffe0;
-      box-shadow: 0 0 12px #00ffe0;
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 0 25px rgba(0, 255, 224, 0.2);
-      transition: transform 0.4s ease;
-      position: relative;
-    }
-    .glass-card:hover {
-      transform: translateY(-5px);
-    }
-    .glass-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(45deg, transparent, rgba(0,255,224,0.1), transparent);
-      z-index: 0;
-    }
-    h2 {
-      color: #00ffe0;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      position: relative;
-      z-index: 1;
-    }
-    ul li, p {
-      font-size: 1rem;
-      line-height: 1.6;
-      position: relative;
-      z-index: 1;
-    }
-    a {
-      color: #00ffe0;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      color: #999;
-      font-size: 0.9rem;
-      padding-top: 2rem;
-      border-top: 1px solid #333;
-    }
-    .icon-link {
-      margin-right: 10px;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-10px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
     }
   </style>
 </head>
 <body>
+  <div class="container mt-5">
+    <button class="btn btn-primary toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+    
+    <h1 class="text-center mb-4" id="heading">Hi, I'm Pritish Kumar Ray 👋</h1>
+    
+    <div class="row text-center mb-4">
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h4>GitHub Stats</h4>
+          <p id="github-repos">Fetching repos...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h4>LeetCode Stats</h4>
+          <img src="https://leetcard.jacoblin.cool/pritishray" alt="LeetCode Stats" class="img-fluid" />
+        </div>
+      </div>
+    </div>
 
-  <header>
-    <h1>Pritish Kumar Ray</h1>
-    <p>🚀 Full Stack Developer | 🎯 DSA Enthusiast | 📊 ML Researcher</p>
-  </header>
+    <div class="text-center mt-5">
+      <p>Follow me on 
+        <a href="https://github.com/pritishray" target="_blank">GitHub</a> | 
+        <a href="https://leetcode.com/pritishray" target="_blank">LeetCode</a>
+      </p>
+    </div>
+  </div>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#dsa">DSA</a>
-    <a href="#papers">Papers</a>
-    <a href="#vlogs">Vlogs</a>
-    <a href="#youtube">YouTube</a>
-    <a href="#work">Work</a>
-    <a href="#connect">Connect</a>
-  </nav>
+  <script>
+    // GSAP Animation
+    gsap.from("#heading", { duration: 1.2, y: -50, opacity: 0, ease: "power3.out" });
 
-  <section id="about" class="glass-card">
-    <h2><i class="fas fa-user icon-link"></i>About Me</h2>
-    <p>
-      Hi, I'm <strong>Pritish Kumar Ray</strong>, a passionate backend developer and researcher based in Odisha, India.  
-      With a Master’s degree in Computer Applications from SOA University and a strong foundation in Java, Spring Boot, and Machine Learning, I enjoy building impactful solutions that solve real-world problems.  
-      My expertise spans backend systems, data structures, algorithms, and AI-powered applications.  
-      Currently, I am focused on advancing my skills through projects like job portals, phone number validation APIs, and machine learning models for plant disease detection.  
-      I am also committed to contributing to the tech community and aim to pursue a Ph.D. in Computer Science to deepen my research and innovation capabilities.  
-    </p>
-    <p>
-      Feel free to explore my projects, connect on <a href="https://www.linkedin.com/in/pritishray" target="_blank" rel="noopener noreferrer">LinkedIn</a>, or check out my code on <a href="https://github.com/PritishDoc" target="_blank" rel="noopener noreferrer">GitHub</a>.
-    </p>
-  </section>
+    // Theme Switcher
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    }
 
-  <section id="projects" class="glass-card">
-    <h2><i class="fas fa-code icon-link"></i>My Projects</h2>
-    <ul>
-      <li><a href="projects/plant-disease-prediction.html" target="_blank"><strong>Plant Disease Prediction:</strong></a> TensorFlow, Python, ML, CNN, Streamlit, Accuracy 98.2%</li>
-      <li><a href="projects/phone-validator.html" target="_blank"><strong>Phone Validator App:</strong></a> Flask, Python, HTML, CSS, JS</li>
-      <li><a href="projects/us-phone-generator.html" target="_blank"><strong>US Toll-Free/Private Number Generator:</strong></a> Flask, Python, HTML, CSS, JS</li>
-      <li><a href="projects/job-orbit.html" target="_blank"><strong>Job Orbit:</strong></a> Java, Rest API, Spring Boot, MySQL</li>
-      <li><a href="projects/electricity-billing.html" target="_blank"><strong>Electricity Billing App:</strong></a> Java, JDBC, AWT, Swing, JavaFX, MySQL</li>
-      <li><a href="projects/hotel-management.html" target="_blank"><strong>Hotel Management App:</strong></a> Java, JDBC, AWT, Swing, JavaFX, MySQL</li>
-      <li><a href="projects/file-management.html" target="_blank"><strong>File Management App:</strong></a> Java, IO, AWT, JTree</li>
-      <li><a href="projects/calculator.html" target="_blank"><strong>Calculator App:</strong></a> Java, AWT</li>
-      <li><a href="https://github.com/PritishDoc" target="_blank">🔗 View All Projects on GitHub</a></li>
-    </ul>
-  </section>
+    // Remember Theme
+    window.onload = () => {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+      }
 
-  <section id="dsa" class="glass-card">
-    <h2><i class="fas fa-brain icon-link"></i>DSA & Profiles</h2>
-    <p>🔗 LeetCode: <a href="https://leetcode.com/u/Pritish_kumar/" target="_blank">leetcode.com/u/Pritish_kumar</a></p>
-    <p>🔗 GeeksforGeeks: <a href="https://www.geeksforgeeks.org/user/pritishray/" target="_blank">gfg.org/user/pritishray</a></p>
-    <p id="streak">🔥 Current LeetCode Streak: Fetching...</p>
-  </section>
-
-  <section id="papers" class="glass-card">
-    <h2><i class="fas fa-file-alt icon-link"></i>Research Papers</h2>
-    <ul>
-      <li>
-        <strong>Plant Disease Prediction using Machine Learning</strong><br />
-        📝 <a href="https://drive.google.com/drive/folders/1zdUK7V6SVW-DJJi_zRuHxW3e3-igAi8R?usp=sharing" target="_blank" rel="noopener noreferrer">Read the Full Paper</a><br />
-        <small>
-          This paper is published by the <strong>American Institute of Physics</strong> in collaboration with <strong>NIT Rourkela</strong>.  
-          It introduces India's most robust dataset and a high-accuracy ML model for plant disease detection and adversarial defense in healthcare AI.
-        </small>
-      </li>
-    </ul>
-  </section>
-
-  <section id="vlogs" class="glass-card">
-    <h2><i class="fas fa-pen-nib icon-link"></i>Vlogs</h2>
-    <p>📝 Explore my tech journey: <a href="https://medium.com/@pritish.iter2022" target="_blank">Read articles on Medium</a></p>
-  </section>
-
-  <section id="youtube" class="glass-card">
-    <h2><i class="fas fa-play-circle icon-link"></i>YouTube Tutorials</h2>
-    <p>📺 Dive into Data Structures & Algorithms and system design with my tutorials. These step-by-step guides will enhance your coding interview skills.</p>
-    <p>🎥 <a href="https://youtube.com/@debugdetective" target="_blank">Watch on YouTube</a></p>
-  </section>
-
-  <section id="work" class="glass-card">
-    <h2><i class="fas fa-briefcase icon-link"></i>Work Experience</h2>
-    <p>💼 Currently working as a <strong>Tech Support Executive</strong> at <strong>VoIP Tech Solution</strong>, DLF Cyber City, Bhubaneswar.</p>
-    <p>🎯 Transitioning to a development role, actively working on backend development, AI integrations, and Spring Boot microservices for telecom systems.</p>
-  </section>
-
-  <section id="connect" class="glass-card">
-    <h2><i class="fas fa-envelope icon-link"></i>Connect With Me</h2>
-    <p>📧 Email: <a href="mailto:pritish.iter2022@gmail.com">pritish.iter2022@gmail.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/pritishray" target="_blank">linkedin.com/in/pritishray</a></p>
-    <p>🐙 GitHub: <a href="https://github.com/PritishDoc" target="_blank">github.com/PritishDoc</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Pritish Kumar Ray. All rights reserved.</p>
-  </footer>
-
+      // GitHub API Fetch
+      fetch("https://api.github.com/users/pritishray")
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("github-repos").innerText = `Public Repos: ${data.public_repos}`;
+        })
+        .catch(() => {
+          document.getElementById("github-repos").innerText = "Failed to fetch data.";
+        });
+    };
+  </script>
 </body>
 </html>
